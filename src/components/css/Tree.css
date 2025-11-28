@@ -1,0 +1,274 @@
+.arvore-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+
+.arvore {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: inherit;
+  min-width: fit-content;
+  margin: 0 auto;
+}
+
+.pessoa {
+  text-align: center;
+  margin: 0 0.625rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos por nível */
+.pessoa.nivel-1 .card {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  border-color: #ff9a56;
+  color: white;
+  min-width: 200px;
+}
+
+.pessoa.nivel-1 .card:hover {
+  background: linear-gradient(135deg, #ffe4b5 0%, #2a6fa6 100%);
+  transform: translateY(-4px);
+}
+
+.pessoa.nivel-2 .card {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  border-color: #56ab91;
+  color: #1a3a3a;
+  min-width: 180px;
+}
+
+.pessoa.nivel-2 .card:hover {
+  background: linear-gradient(135deg, #a0ffb8 0%, #a8e1fd 100%);
+  transform: translateY(-4px);
+}
+
+.pessoa.nivel-3 .card {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  border-color: #f77062;
+  color: white;
+  min-width: 160px;
+}
+
+.pessoa.nivel-3 .card:hover {
+  background: linear-gradient(135deg, #fb7fab 0%, #fef5a8 100%);
+  transform: translateY(-4px);
+}
+
+.card {
+  display: inline-block;
+  padding: 1rem 1.25rem;
+  border: 2px solid;
+  border-radius: 1.25rem;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nome-text {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.cargo-text {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+.filhos {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Linha horizontal conectando filhos */
+.filhos::before {
+  content: "";
+  position: absolute;
+  top: -1.25rem;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(to right, 
+    rgba(132, 250, 176, 0.3), 
+    rgba(132, 250, 176, 0.8), 
+    rgba(132, 250, 176, 0.3));
+}
+
+/* Linha vertical conectando pais aos filhos */
+.pessoa::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, 
+    rgba(132, 250, 176, 0.5), 
+    rgba(132, 250, 176, 0.2));
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+  .arvore {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .pessoa {
+    margin: 0 0.5rem;
+  }
+
+  .pessoa.nivel-1 .card {
+    min-width: 180px;
+  }
+
+  .pessoa.nivel-2 .card {
+    min-width: 160px;
+  }
+
+  .pessoa.nivel-3 .card {
+    min-width: 140px;
+  }
+
+  .nome-text {
+    font-size: 0.9rem;
+  }
+
+  .cargo-text {
+    font-size: 0.75rem;
+  }
+
+  .filhos {
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .filhos::before {
+    top: -1rem;
+  }
+
+  .pessoa::before {
+    top: -1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 640px) {
+  .arvore-container {
+    padding-bottom: 1rem;
+  }
+
+  .arvore {
+    padding: 1rem 0.5rem;
+  }
+
+  .pessoa {
+    margin: 0 0.25rem;
+  }
+
+  .pessoa.nivel-1 .card {
+    min-width: 140px;
+    padding: 0.75rem 1rem;
+  }
+
+  .pessoa.nivel-2 .card {
+    min-width: 120px;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .pessoa.nivel-3 .card {
+    min-width: 110px;
+    padding: 0.625rem 0.75rem;
+  }
+
+  .nome-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .cargo-text {
+    font-size: 0.65rem;
+    margin-top: 0.2rem;
+  }
+
+  .filhos {
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .filhos::before {
+    top: -0.875rem;
+  }
+
+  .pessoa::before {
+    top: -1rem;
+    height: 1rem;
+  }
+}
+
+/* Responsividade para celulares pequenos */
+@media (max-width: 480px) {
+  .arvore {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .pessoa {
+    margin: 0 0.125rem;
+  }
+
+  .pessoa.nivel-1 .card {
+    min-width: 120px;
+    padding: 0.625rem 0.75rem;
+  }
+
+  .pessoa.nivel-2 .card {
+    min-width: 105px;
+    padding: 0.5rem 0.625rem;
+  }
+
+  .pessoa.nivel-3 .card {
+    min-width: 95px;
+    padding: 0.5rem 0.625rem;
+  }
+
+  .nome-text {
+    font-size: 0.7rem;
+  }
+
+  .cargo-text {
+    font-size: 0.6rem;
+  }
+
+  .filhos {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .filhos::before {
+    top: -0.75rem;
+  }
+
+  .pessoa::before {
+    top: -0.875rem;
+    height: 0.875rem;
+  }
+}

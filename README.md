@@ -1,61 +1,43 @@
-# Welcome to your OnSpace project
+# 🌿 Natura Pet
 
-## How can I edit this code?
+**Natura Pet** é um site criado para fins de apresentação, com o objetivo de promover conceitos de **sustentabilidade para cachorros**, apresentando ideias, soluções e informações que ajudam a construir um futuro mais ecológico para os pets e para o planeta.
 
-There are several ways of editing your application.
+---
 
-**Use OnSpace**
+## 📌 Como editar este código?
 
-Simply visit the [OnSpace Project]() and start prompting.
+Existem diversas maneiras de editar sua aplicação:
 
-Changes made via OnSpace will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+### 🟩 Usar o OnSpace
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in OnSpace.
+Basta acessar o **Projeto no OnSpace** e começar a escrever seus prompts.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Todas as alterações feitas no OnSpace serão **automaticamente commitadas** neste repositório.
 
-Follow these steps:
+---
+
+### 🖥️ Usar seu IDE preferido
+
+Se desejar trabalhar localmente, você pode clonar este repositório e editar à vontade.  
+Alterações enviadas via **git push** aparecerão automaticamente no OnSpace.
+
+**Requisito:** Node.js + npm instalados  
+Instalação recomendada via nvm:  
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+**Passo a passo:**
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Passo 1: Clone o repositório usando a URL do projeto.
+git clone <URL_DO_SEU_GIT>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Passo 2: Entre na pasta do projeto.
+cd <NOME_DO_SEU_PROJETO>
 
-# Step 3: Install the necessary dependencies.
+# Passo 3: Instale as dependências.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Passo 4: Inicie o servidor de desenvolvimento.
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [OnSpace]() and click on Share -> Publish.
